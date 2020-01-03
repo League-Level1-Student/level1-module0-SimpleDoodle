@@ -7,10 +7,10 @@ import org.jointheleague.graphical.robot.Robot;
 public class Houses {
 	Robot rob = new Robot();
 int roof = 60;
-int y = 0;
+int y = 60;
 	public void run() {
 		rob.penDown();
-		rob.setSpeed(10);
+		rob.setSpeed(1000000000);
 		rob.setX(10);
 		rob.setY(600);
 		rob.setPenWidth(5);
@@ -140,11 +140,11 @@ int y = 0;
 	}
 	void pointyRoof() {
 		roof = 60;
-		int y = 60;
+		y = 60;
 	}
 	void flatRoof() {
 		roof = 90;
-		int y = 0;
+		y = 0;
 	}
 	}
 	
