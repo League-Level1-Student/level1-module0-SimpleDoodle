@@ -21,6 +21,7 @@ import javax.swing.JPanel;
 public class DrumKit implements MouseListener {
 
 	JLabel drumLabelWithImage;
+	JLabel cymbalLabelWithImage;
 
 	public void run() throws MalformedURLException {
 
@@ -43,27 +44,32 @@ public class DrumKit implements MouseListener {
 
 		// 8. Put the name of your image file in a String variable.
 		String snare = "snare.jpg";
+		String cymbal = "cymbal.jpg";
 		// 9. Edit the next line to use your String variable
 		drumLabelWithImage = createLabelImage(snare);
-
-		// 10. Add the image to the panel
-		panel.add(drumLabelWithImage);
+cymbalLabelWithImage = createLabelImage(cymbal);
+ 		// 10. Add the image to the panel
+	panel.add(drumLabelWithImage);
+	panel.add(cymbalLabelWithImage);
 		// 11. Set the layout of the panel to "new GridLayout()"
 		panel.setLayout(new GridLayout());
 		// 12. call the pack() method on the frame. Run your program. Do you see
 		// your drum image?
 		frame.pack();
 		// 13. add this mouse listener to drumLabelWithImage
-		panel.addMouseListener(this);
+		drumLabelWithImage.addMouseListener(this);
+		cymbalLabelWithImage.addMouseListener(this);
 		// 18. Add more images to make a drumkit. Remember to add this mouse
 		// listener to each one.
+		
+		
 
 	}
 
 	public void mouseClicked(MouseEvent e) {
 		// 14. Print "mouse clicked" to the console. Run your program and watch
 		// the console to see when this is printed.
-//System.out.println("mouse clicked");
+//System.out.println(e.getSource());
 		JLabel drumClicked = (JLabel) e.getSource(); // This line gets the label
 		// that the mouse
 		// clicked on
@@ -74,12 +80,17 @@ public class DrumKit implements MouseListener {
 
 		// 16. If they clicked on the drumImage...
 		String drum = "drum.wav";
+		String cymbal = "cymbal.wav";
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 		if (drumClicked == drumLabelWithImage) {
 			playSound(drum);
 		}
+		if (drumClicked == cymbalLabelWithImage) {
+			playSound(cymbal);
+		}
 	}
+	
 
 	private JLabel createLabelImage(String fileName) throws MalformedURLException {
 		URL imageURL = getClass().getResource(fileName);
