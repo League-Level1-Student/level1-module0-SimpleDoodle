@@ -59,13 +59,25 @@ int score = 0;
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+if (guess.equalsIgnoreCase("arnold")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!");
+	score++;
+}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+else {
+	JOptionPane.showMessageDialog(null, "WRONG! It's is Arnold");
+}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
-
+		String guess1 = JOptionPane.showInputDialog("who is this?");
+if (guess.equalsIgnoreCase("leonardo")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!");
+	score++;
+}
+else {
+	JOptionPane.showMessageDialog(null, "WRONG! It's is Leonardo");
+}
 		// 8. .... repeat 4-7 for all your images.....
 
 		// 9. Show them their current score
