@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 public class jackinthebox implements MouseListener {
 	JFrame frame1 = new JFrame();
 	int clicked = 0;
+
 	public void start() {
 		// TODO Auto-generated method stub
 		JLabel label1 = new JLabel();
@@ -24,7 +25,7 @@ public class jackinthebox implements MouseListener {
 		frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		button1.addMouseListener(this);
 		frame1.pack();
-			}
+	}
 
 	private void showPicture(String fileName) {
 		try {
@@ -72,31 +73,31 @@ public class jackinthebox implements MouseListener {
 			showPicture("jackInTheBox.png");
 			frame1.pack();
 			playSound("homer-woohoo.wav");
-			}
+		}
 
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }
